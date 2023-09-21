@@ -2,7 +2,7 @@ import express from "express";
 import * as path from "path";
 
 const app = express();
-const port = 4000;
+const port = 3000;
 
 // Create a server instance
 
