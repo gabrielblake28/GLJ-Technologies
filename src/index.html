@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GLJ Technologies</title>
+    <title>GLJ Technologies: Tic Tac Toe</title>
   </head>
   <body>
-    <h1>GLJ Technologies</h1>
-    <h2>Meet the team</h2>
-    <p>We are a group of students at Bellevue College working together to develop projects for our ISIT 422 class.</p>
-    <ul>
-      <li><a href="/pages/Gabriel.html">Gabriel</a></li>
-      <li><a href="/pages/Lori.html">Lori</a></li>
-      <li><a href="/pages/Jacob.html">Jacob</a></li>
-    </ul>
+    <h1>GLJ Technologies: Tic Tac Toe</h1>
+    
+    <div id="d_game" hidden="true">
+      <h2>Play Game:</h2>
+      <canvas id="c_board" width="200" height="200" style="border: 1px solid #000000;">
+      Canvas not supported by current browser.
+      </canvas>
+    </div>
+
+    <div id="d_goFirst" hidden="true">
+      <h2>Would you like to go first or go second?</h2>
+      <button id="b_goFirst" onclick="goesFirst(false)">Go First</button>
+      <button id="b_goSecond" onclick="goesFirst(true)">Go Second</button>
+    </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
