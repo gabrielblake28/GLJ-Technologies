@@ -98,4 +98,18 @@ function renderBoard() {
     console.log(debug);
 }
 
+function getCurrentSquare(_canvas, event) {
+    var canvasPos = _canvas.getBoundingClientRect();
+    var scale = _canvas.width / 3;
+    var mousePos = [
+
+        Math.floor((event.clientY - canvasPos.top) / scale),
+        Math.floor((event.clientX - canvasPos.left) / scale)
+    ];
+    console.log(
+        "User selected square:\nColumn: " + mousePos[0] +
+        "\nRow: " + mousePos[1]);
+    return mousePos;
+}
+
 showPopup();
