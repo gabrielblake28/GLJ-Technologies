@@ -1,5 +1,5 @@
 Program Written By: Gabriel, Lori, and Jacob
-Documentation Managed By: Jacob (09/26/2023 : 8:13PM (PST))
+Documentation Managed By: Jacob (09/27/2023 : 3:52PM (PST))
 
 Documentation:
     Objects:
@@ -14,6 +14,7 @@ Documentation:
 
         c_board:
             - (Canvas) Used to display gameplay
+            - (Click) Triggers getCurrentSquare(self, click event)
         
         b_goFirst:
             - (Button) Triggers goesFirst(false)
@@ -106,4 +107,14 @@ Documentation:
             - Calls:
                 - drawX
                 - drawO
-            
+        
+        getCurrentSquare:
+            - Takes in:
+                - Canvas
+                - Click event
+            - Actions:
+                Calculates box selected by mouse
+            - Calls:
+                -NA
+            - Returns:
+                Integer Array [Column, Row] selected by mouse
