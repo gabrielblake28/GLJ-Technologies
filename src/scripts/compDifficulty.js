@@ -30,7 +30,9 @@ function medDifficultySelection() {
     // Will loop until a valid tile has been found or (if none exist) a random one is chosen.
     do {
         if (oldMoves.length == 0) {
-            return easyDifficultySelection();
+            result = easyDifficultySelection();
+            oldMoves.push(result);
+            return result;
         }
         else {
             holdIndex = Math.floor(Math.random() * oldMoves.length);
