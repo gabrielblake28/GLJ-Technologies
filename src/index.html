@@ -23,13 +23,15 @@
 
     <div id="d_goFirst" hidden="true">
       <h2>Select Difficulty:</h2>
-      <input type="radio" id="easy" name="difficulty" checked="true">
+      <input type="radio" id="easy" name="difficulty" checked="true" />
       <label for="easy">Beginner</label>
-      <input type="radio" id="medium" name="difficulty">
+      <input type="radio" id="medium" name="difficulty" />
       <label for="medium">Intermediate</label>
       <h2>Would you like to go first or go second?</h2>
-      <button id="b_goFirst" onclick="goesFirst(false, checkDifficulty())">Go First</button>
-      <button id="b_goSecond" onclick="goesFirst(true, checkDifficulty())">Go Second</button>
+      <button id="b_goFirst" onclick="goesFirst(false, checkDifficulty())">
+        Go First
+      </button>
+      <button id="b_goSecond" onclick="compFirst()">Go Second</button>
     </div>
 
     <script src="./scripts/script.js"></script>
