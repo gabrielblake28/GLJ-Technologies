@@ -1,4 +1,4 @@
-var oldMoves = [[0,1]];
+var oldMoves = [];
 
 // Selects a random empty tile.
 // Takes in: Nothing
@@ -50,7 +50,7 @@ function medDifficultySelection() {
     } while (true);
 }
 
-// Finds unoccupied adjacent tiles.
+// Finds unoccupied adjacent tiles to the provided "base" tile.
 // Takes in: Coordinates of the "base" tile.
 // Returns: Coordinates of a random, adjacent, unoccupied tile in the format of [num1, num2] if one exists. If not, returns false.
 function lookForAdjacentTiles(base) {
