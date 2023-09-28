@@ -4,6 +4,7 @@ var a_board = [
     [0, 0, 0],
     [0, 0, 0]
 ];
+var difficulty;
 
 function showPopup() {
     document.getElementById("d_game").hidden = true;
@@ -12,10 +13,27 @@ function showPopup() {
     console.log("Popup Displayed");
 }
 
-function goesFirst(_isComTurn) {
+function goesFirst(_isComTurn, _difficulty) {
     isComTurn = _isComTurn;
+    difficulty = _difficulty;
     console.log("isComTurn = " + isComTurn);
+    console.log("difficulty = " + difficulty);
     startGame();
+}
+
+function checkDifficulty() {
+    var easy = document.getElementById("easy");
+    var medium = document.getElementById("medium");
+
+    if (easy.checked == true) {
+        return 0;
+    }
+    else if (medium.checked == true) {
+        return 1;
+    }
+    else {
+        return true;
+    }
 }
 
 function startGame() {
@@ -102,7 +120,6 @@ function getCurrentSquare(_canvas, event) {
     var canvasPos = _canvas.getBoundingClientRect();
     var scale = _canvas.width / 3;
     var mousePos = [
-
         Math.floor((event.clientY - canvasPos.top) / scale),
         Math.floor((event.clientX - canvasPos.left) / scale)
     ];
